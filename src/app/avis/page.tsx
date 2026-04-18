@@ -3,13 +3,14 @@ import PageHero from '@/components/pages/PageHero'
 import ReviewCard from '@/components/ui/ReviewCard'
 import { REVIEWS, AGGREGATE_RATING } from '@/data/reviews'
 import Link from 'next/link'
+import { routeUrl } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Avis Clients – Ce que disent nos visiteurs',
   description:
     'Lisez les avis clients de Wok In, restaurant asiatique à Rebecq-Quenast. ' +
     `Note Google ${AGGREGATE_RATING.score}/5 basée sur ${AGGREGATE_RATING.count} avis. Buffet · Wok · Teppanyaki.`,
-  alternates: { canonical: 'https://wokin-rebecq.be/avis/' },
+  alternates: { canonical: routeUrl('/avis') },
 }
 
 function StarRating({ score, max = 5 }: { score: number; max?: number }) {

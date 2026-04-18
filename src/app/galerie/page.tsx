@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import PageHero from '@/components/pages/PageHero'
 import Link from 'next/link'
+import { routeUrl } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Galerie Photos – Plats & Ambiance du Restaurant',
   description:
     'Découvrez la galerie photos de Wok In, restaurant asiatique à Rebecq-Quenast. ' +
     'Plats du buffet, wok, teppanyaki et ambiance chaleureuse en images. Brabant wallon.',
-  alternates: { canonical: 'https://wokin-rebecq.be/galerie/' },
+  alternates: { canonical: routeUrl('/galerie') },
   openGraph: {
     title: 'Galerie | Wok In – Restaurant Asiatique Rebecq',
     images: ['/images/gallery/gallery-01.jpg'],

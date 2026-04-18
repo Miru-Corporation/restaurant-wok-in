@@ -3,13 +3,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import PageHero from '@/components/pages/PageHero'
 import SectionTitle from '@/components/ui/SectionTitle'
+import { routeUrl } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Le Restaurant – Notre Histoire & Nos Valeurs',
   description:
     'Découvrez l\'histoire et les valeurs de Wok In, restaurant asiatique à Rebecq-Quenast. ' +
     'Cadre élégant, cuisine généreuse, accueil chaleureux. Un restaurant à découvrir en Brabant wallon.',
-  alternates: { canonical: 'https://wokin-rebecq.be/restaurant/' },
+  alternates: { canonical: routeUrl('/restaurant') },
   openGraph: {
     title: 'Le Restaurant | Wok In – Restaurant Asiatique Rebecq',
     images: ['/images/restaurant-ambiance.jpg'],

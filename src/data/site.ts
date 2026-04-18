@@ -1,4 +1,21 @@
-export const SITE_URL = 'https://wokin-rebecq.be'
+const DEFAULT_SITE_URL = 'https://wokin-rebecq.be'
+
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, '')
+export const SITE_BASE_PATH = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/$/, '')
+
+export function routeUrl(path = '/') {
+  if (path === '/' || path === '') {
+    return `${SITE_URL}/`
+  }
+
+  const normalized = path.replace(/^\/+|\/+$/g, '')
+  return `${SITE_URL}/${normalized}/`
+}
+
+export function assetUrl(path: string) {
+  const normalized = path.startsWith('/') ? path : `/${path}`
+  return `${SITE_URL}${normalized}`
+}
 
 export const BUSINESS = {
   name: 'Wok In',

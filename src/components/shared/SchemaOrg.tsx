@@ -1,13 +1,15 @@
+import { assetUrl, routeUrl, SITE_URL } from '@/data/site'
+
 export default function SchemaOrg() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Restaurant',
     name: 'Wok In',
-    url: 'https://wokin-rebecq.be',
+    url: SITE_URL,
     telephone: '+32XXXXXXXXX',
     priceRange: '$$',
     servesCuisine: ['Asian', 'Japanese', 'Chinese', 'Thai'],
-    hasMenu: 'https://wokin-rebecq.be/carte/',
+    hasMenu: routeUrl('/carte'),
     address: {
       '@type': 'PostalAddress',
       streetAddress: '[Adresse à compléter]',
@@ -35,7 +37,7 @@ export default function SchemaOrg() {
       { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday',    opens: '12:00', closes: '14:30' },
       { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday',    opens: '18:00', closes: '22:00' },
     ],
-    image: 'https://wokin-rebecq.be/images/og-image.jpg',
+    image: assetUrl('/images/og-image.jpg'),
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.7',

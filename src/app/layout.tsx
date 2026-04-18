@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import SchemaOrg from '@/components/shared/SchemaOrg'
+import { routeUrl, SITE_URL } from '@/data/site'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -18,7 +19,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://wokin-rebecq.be'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Wok In – Restaurant Asiatique Rebecq | Buffet · Wok · Teppanyaki',
     template: '%s | Wok In – Restaurant Asiatique Rebecq',
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://wokin-rebecq.be/',
+    canonical: routeUrl('/'),
   },
 }
 

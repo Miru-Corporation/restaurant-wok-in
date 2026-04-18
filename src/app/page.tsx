@@ -8,6 +8,7 @@ import ReviewsSection from '@/components/home/ReviewsSection'
 import HoursSection from '@/components/home/HoursSection'
 import CTASection from '@/components/home/CTASection'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { routeUrl } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Wok In – Restaurant Asiatique Rebecq | Buffet · Wok · Teppanyaki',
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     'Buffet à volonté 80+ plats, wok sur commande, teppanyaki spectaculaire. ' +
     'Idéal pour familles, groupes & entreprises. Réservez dès maintenant.',
   alternates: {
-    canonical: 'https://wokin-rebecq.be/',
+    canonical: routeUrl('/'),
   },
 }
 

@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import PageHero from '@/components/pages/PageHero'
 import MenuTabs from '@/components/pages/MenuTabs'
 import { MENU_SECTIONS } from '@/data/menu'
+import { routeUrl } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Carte & Buffet Asiatique – Formules & Tarifs',
   description:
     'Buffet asiatique à volonté 80+ plats, wok à la carte et teppanyaki spectaculaire à Rebecq. ' +
     'Formules midi dès 22,90€ · Soir & week-end 28,90€. Réservez chez Wok In, Brabant wallon.',
-  alternates: { canonical: 'https://wokin-rebecq.be/carte/' },
+  alternates: { canonical: routeUrl('/carte') },
   openGraph: {
     title: 'Carte & Buffet | Wok In – Restaurant Asiatique Rebecq',
     images: ['/images/buffet.jpg'],
