@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import SectionTitle from '@/components/ui/SectionTitle'
+import { assetPath } from '@/data/site'
 
 const PREVIEW_IMAGES = [
-  { src: '/images/gallery/gallery-01.jpg', alt: 'Plats de sushis et makis frais', span: 'col-span-2 row-span-2' },
-  { src: '/images/gallery/gallery-02.jpg', alt: 'Buffet chaud asiatique' },
-  { src: '/images/gallery/gallery-03.jpg', alt: 'Wok flambé en direct' },
-  { src: '/images/gallery/gallery-04.jpg', alt: 'Teppanyaki spectaculaire' },
-  { src: '/images/gallery/gallery-05.jpg', alt: 'Salle du restaurant Wok In' },
+  { src: assetPath('/images/gallery/gallery-01.jpg'), alt: 'Plats de sushis et makis frais', span: 'col-span-2 row-span-2' },
+  { src: assetPath('/images/gallery/gallery-02.jpg'), alt: 'Buffet chaud asiatique' },
+  { src: assetPath('/images/gallery/gallery-03.jpg'), alt: 'Wok flambe en direct' },
+  { src: assetPath('/images/gallery/gallery-04.jpg'), alt: 'Teppanyaki spectaculaire' },
+  { src: assetPath('/images/gallery/gallery-05.jpg'), alt: 'Salle du restaurant Wok In' },
 ]
 
 export default function GalleryPreview() {
@@ -16,12 +17,11 @@ export default function GalleryPreview() {
       <div className="section-container">
         <SectionTitle
           eyebrow="Galerie"
-          title="Un cadre soigné, des plats appétissants"
-          subtitle="Laissez-vous inspirer par nos créations culinaires et l'ambiance chaleureuse de notre restaurant."
+          title="Un cadre soigne, des plats appetissants"
+          subtitle="Laissez-vous inspirer par nos creations culinaires et l'ambiance chaleureuse de notre restaurant."
           id="gallery-preview-title"
         />
 
-        {/* Mosaic grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-3 mb-10">
           {PREVIEW_IMAGES.map((img, i) => (
             <div

@@ -4,7 +4,7 @@ import '@/styles/globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import SchemaOrg from '@/components/shared/SchemaOrg'
-import { routeUrl, SITE_URL } from '@/data/site'
+import { assetUrl, routeUrl, SITE_URL } from '@/data/site'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -25,19 +25,19 @@ export const metadata: Metadata = {
     template: '%s | Wok In – Restaurant Asiatique Rebecq',
   },
   description:
-    'Wok In, votre restaurant asiatique à Rebecq-Quenast (Brabant wallon). ' +
-    'Buffet à volonté 80+ plats, wok sur commande et teppanyaki spectaculaire. ' +
-    'Idéal pour familles, groupes et entreprises.',
+    'Wok In, votre restaurant asiatique a Rebecq-Quenast (Brabant wallon). ' +
+    'Buffet a volonte 80+ plats, wok sur commande et teppanyaki spectaculaire. ' +
+    'Ideal pour familles, groupes et entreprises.',
   keywords: [
     'restaurant asiatique Rebecq',
     'buffet asiatique Quenast',
     'wok Rebecq',
     'teppanyaki Rebecq',
-    'buffet à volonté Brabant wallon',
+    'buffet a volonte Brabant wallon',
     'restaurant groupe Rebecq',
     'restaurant familial Quenast',
     'sushi Rebecq',
-    'plats à emporter Rebecq',
+    'plats a emporter Rebecq',
   ],
   openGraph: {
     type: 'website',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: 'Wok In',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: assetUrl('/images/og-image.jpg'),
         width: 1200,
         height: 630,
         alt: 'Wok In – Restaurant Asiatique Rebecq',

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import SectionTitle from '@/components/ui/SectionTitle'
+import { assetPath } from '@/data/site'
 
 const FEATURES = [
   {
@@ -20,7 +21,7 @@ const FEATURES = [
       'Plus de 80 plats chauds et froids renouvelés en permanence. Sushis frais, makis, ' +
       'entrées asiatiques, plats chauds variés et desserts gourmands. Une expérience ' +
       'culinaire illimitée pour toute la famille.',
-    image: '/images/buffet.jpg',
+    image: assetPath('/images/buffet.jpg'),
     href: '/carte#buffet',
     cta: 'Voir le buffet',
   },
@@ -40,7 +41,7 @@ const FEATURES = [
       'Composez votre plat sur mesure : choisissez vos protéines, vos légumes et votre sauce. ' +
       'Notre chef prépare votre wok à la flamme vive, sous vos yeux. ' +
       'Fraîcheur absolue, cuisson parfaite.',
-    image: '/images/wok.jpg',
+    image: assetPath('/images/wok.jpg'),
     href: '/carte#wok',
     cta: 'Voir les woks',
   },
@@ -58,7 +59,7 @@ const FEATURES = [
       'Vivez une expérience unique : viandes nobles, poissons et légumes grillés sur plaque ' +
       'teppan chauffée à blanc. Un vrai spectacle culinaire dans une atmosphère festive. ' +
       'Parfait pour les occasions spéciales.',
-    image: '/images/teppanyaki.jpg',
+    image: assetPath('/images/teppanyaki.jpg'),
     href: '/carte#teppanyaki',
     cta: 'Voir le teppanyaki',
   },

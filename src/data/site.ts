@@ -12,6 +12,11 @@ export function routeUrl(path = '/') {
   return `${SITE_URL}/${normalized}/`
 }
 
+export function assetPath(path: string) {
+  const normalized = path.startsWith('/') ? path : `/${path}`
+  return `${SITE_BASE_PATH}${normalized}`
+}
+
 export function assetUrl(path: string) {
   const normalized = path.startsWith('/') ? path : `/${path}`
   return `${SITE_URL}${normalized}`
@@ -20,12 +25,12 @@ export function assetUrl(path: string) {
 export const BUSINESS = {
   name: 'Wok In',
   shortDescription:
-    'Restaurant asiatique premium à Rebecq-Quenast avec buffet à volonté, wok, teppanyaki et solutions pour groupes.',
+    'Restaurant asiatique premium a Rebecq-Quenast avec buffet a volonte, wok, teppanyaki et solutions pour groupes.',
   phoneHref: 'tel:+32XXXXXXXXX',
   phoneLabel: '+32 XX XX XX XX',
   email: 'info@wokin-rebecq.be',
   emailHref: 'mailto:info@wokin-rebecq.be',
-  streetAddress: '[Adresse à confirmer]',
+  streetAddress: '[Adresse a confirmer]',
   postalCode: '1430',
   locality: 'Rebecq (Quenast)',
   region: 'Brabant wallon',

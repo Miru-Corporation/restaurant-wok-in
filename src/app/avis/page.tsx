@@ -3,7 +3,7 @@ import PageHero from '@/components/pages/PageHero'
 import ReviewCard from '@/components/ui/ReviewCard'
 import { REVIEWS, AGGREGATE_RATING } from '@/data/reviews'
 import Link from 'next/link'
-import { routeUrl } from '@/data/site'
+import { assetPath, routeUrl } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Avis Clients – Ce que disent nos visiteurs',
@@ -38,7 +38,7 @@ export default function AvisPage() {
         eyebrow="Ils nous ont fait confiance"
         title="Avis Clients"
         subtitle="La satisfaction de nos clients est notre plus belle récompense"
-        image="/images/restaurant-ambiance.jpg"
+        image={assetPath('/images/restaurant-ambiance.jpg')}
         imageAlt="Clients satisfaits au restaurant Wok In Rebecq"
       />
 

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageHero from '@/components/pages/PageHero'
-import { BUSINESS, SITE_URL } from '@/data/site'
+import { assetPath, assetUrl, BUSINESS, SITE_URL } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Reservation & A emporter - Wok In Rebecq',
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/reservation/` },
   openGraph: {
     title: 'Reservation | Wok In - Restaurant Asiatique Rebecq',
-    images: ['/images/buffet.jpg'],
+    images: [assetUrl('/images/buffet.jpg')],
   },
 }
 
@@ -52,7 +52,7 @@ export default function ReservationPage() {
         eyebrow="Reservation & a emporter"
         title="Choisissez la formule la plus simple"
         subtitle="Un parcours clair, sans backend complexe, pour reserver une table ou preparer votre commande a emporter."
-        image="/images/buffet.jpg"
+        image={assetPath('/images/buffet.jpg')}
         imageAlt="Buffet asiatique premium du restaurant Wok In"
       />
 

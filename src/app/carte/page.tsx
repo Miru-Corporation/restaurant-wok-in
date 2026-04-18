@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import PageHero from '@/components/pages/PageHero'
 import MenuTabs from '@/components/pages/MenuTabs'
 import { MENU_SECTIONS } from '@/data/menu'
-import { routeUrl } from '@/data/site'
+import { assetPath, assetUrl, routeUrl } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Carte & Buffet Asiatique – Formules & Tarifs',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: routeUrl('/carte') },
   openGraph: {
     title: 'Carte & Buffet | Wok In – Restaurant Asiatique Rebecq',
-    images: ['/images/buffet.jpg'],
+    images: [assetUrl('/images/buffet.jpg')],
   },
 }
 
@@ -23,7 +23,7 @@ export default function CartePage() {
         eyebrow="Buffet · Wok · Teppanyaki"
         title="Notre Carte"
         subtitle="Une cuisine asiatique généreuse, fraîche et variée pour tous les goûts"
-        image="/images/buffet.jpg"
+        image={assetPath('/images/buffet.jpg')}
         imageAlt="Grand buffet asiatique du restaurant Wok In à Rebecq"
       />
 

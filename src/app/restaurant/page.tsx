@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import PageHero from '@/components/pages/PageHero'
 import SectionTitle from '@/components/ui/SectionTitle'
-import { routeUrl } from '@/data/site'
+import { assetPath, assetUrl, routeUrl } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Le Restaurant – Notre Histoire & Nos Valeurs',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: routeUrl('/restaurant') },
   openGraph: {
     title: 'Le Restaurant | Wok In – Restaurant Asiatique Rebecq',
-    images: ['/images/restaurant-ambiance.jpg'],
+    images: [assetUrl('/images/restaurant-ambiance.jpg')],
   },
 }
 
@@ -47,7 +47,7 @@ export default function RestaurantPage() {
         eyebrow="Découvrez Wok In"
         title="Le Restaurant"
         subtitle="Une adresse de référence pour la cuisine asiatique en Brabant wallon"
-        image="/images/restaurant-ambiance.jpg"
+        image={assetPath('/images/restaurant-ambiance.jpg')}
         imageAlt="Salle du restaurant Wok In à Rebecq, cadre élégant et chaleureux"
       />
 
@@ -84,7 +84,7 @@ export default function RestaurantPage() {
             </div>
             <div className="relative aspect-square rounded-sm overflow-hidden">
               <Image
-                src="/images/restaurant-story.jpg"
+                src={assetPath('/images/restaurant-story.jpg')}
                 alt="Équipe et ambiance du restaurant Wok In Rebecq"
                 fill
                 className="object-cover"
@@ -118,7 +118,7 @@ export default function RestaurantPage() {
       {/* Ambiance full-width */}
       <section className="relative h-80 overflow-hidden" aria-hidden="true">
         <Image
-          src="/images/restaurant-salle.jpg"
+          src={assetPath('/images/restaurant-salle.jpg')}
           alt="Vue panoramique de la salle du restaurant Wok In"
           fill
           className="object-cover"

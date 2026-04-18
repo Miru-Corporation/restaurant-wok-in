@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageHero from '@/components/pages/PageHero'
 import { HOURS } from '@/data/hours'
-import { BUSINESS, SITE_URL } from '@/data/site'
+import { assetPath, assetUrl, BUSINESS, SITE_URL } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Contact & Acces - Wok In Rebecq',
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/contact/` },
   openGraph: {
     title: 'Contact & Acces | Wok In - Restaurant Asiatique Rebecq',
-    images: ['/images/restaurant-salle.jpg'],
+    images: [assetUrl('/images/restaurant-salle.jpg')],
   },
 }
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
         eyebrow="Contact & acces"
         title="Organisez votre visite"
         subtitle="Toutes les informations utiles pour reserver, nous joindre et venir facilement chez Wok In."
-        image="/images/restaurant-salle.jpg"
+        image={assetPath('/images/restaurant-salle.jpg')}
         imageAlt="Facade et acces du restaurant Wok In a Rebecq"
       />
 
